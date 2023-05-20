@@ -1,8 +1,9 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
+
 
     <title>Blog Django v1</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -15,23 +16,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+    <!--  -->
 
-    
 </head>
+
 <body>
     <header>
         <h1><a href="{% url 'home' %}"> Django Tiburon 1</a></h1>
+        <a href="{% url 'create_post' %}">Nuevo Post</a>
+
     </header>
     <div>
         {% block content %}
-        
+
         {% endblock content %}
     </div>
 
     <div>
-        
+
     </div>
 </body>
+
 </html>
 
 
