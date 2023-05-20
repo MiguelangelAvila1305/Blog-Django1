@@ -5,6 +5,6 @@
     
         <h2><a href="{% url 'post_detail' post.pk %}"> {{ post.title }}</a></h2>
         <p>{{ post.body }}</p>
-
+        <p><b>Autor:{{ post.author }}</b></p>
     {% endfor %}
 {% endblock content %}
