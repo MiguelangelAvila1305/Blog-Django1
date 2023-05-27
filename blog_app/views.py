@@ -29,6 +29,8 @@ class DeletePost(DeleteView):
     fields= ['title', 'body']
     success_url = reverse_lazy('home')
     
+
+
     
     
     

@@ -7,7 +7,7 @@
 
     <title>Blog Django v1</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-
+    
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,9 +23,25 @@
 <body>
     <header>
         <h1><a href="{% url 'home' %}"> Django Tiburon 1</a></h1>
-        <a href="{% url 'create_post' %}">Nuevo Post</a>
+        <a href="{% url 'create_post' %}">
+            <h2>Nuevo Post</h2>
+        </a>
 
     </header>
+
+    {% if user.is_authenticated %}
+
+    <p>Epale {{ user.username }}</p>
+    <a href="{% url 'logout' %}">Logout</a>
+
+    {% else %}
+
+    <p>Epale no estas reistrado</p>
+    <a href="{% url 'login' %}">Login</a>
+
+    {% endif %}
+    
+
     <div>
         {% block content %}
 
