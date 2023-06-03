@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>{{ post.title }}</h2>
+    <h2 class="bg-slate-700 rounded-xl text-white m-auto max-w-sm px-2 pt-1">{{ post.title }}</h2>
     <p>{{ post.body }}</p>
     
-    <a href='{% url "update_post" post.pk %}'>Editar post</a>
+    <a class="bg-sky-500 rounded-xl text-white px-2 pt-1 m-3" href='{% url "update_post" post.pk %}'>Editar post</a>
     
-    <a href='{% url "delete_post" post.pk %}'>Delete post</a>
+    <a class="bg-red-500 rounded-xl text-white px-2 pt-1 m-3" href='{% url "delete_post" post.pk %}'>Delete post</a>
 {% endblock %}

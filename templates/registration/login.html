@@ -2,12 +2,12 @@
 
 {% block content%}
 
-<h1>Log in</h1>
+<h1 class="text-xl font-medium">Log in</h1>
 
 <form action="" method="POST">
     {% csrf_token %}
-    {{form}}
-    <button type="submit">Sign in</button>
+   <div class="flex mb-3 "> {{form.as_p}}</div>
+    <button type="submit" class="  bg-green-500 rounded-xl text-white px-2 py-1">Sign in</button>
 </form>
 
 

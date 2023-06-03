@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Nuevo post</h1>
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" value="Enviar">
-    </form>
+<h1 class="text-xl font-medium">Nuevo post</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="flex space-y-3 flex-col">
+        {{ form.as_p }}
+        <div>
+            <input type="submit" value="Enviar" class="bg-blue-500 p-2 text-white py-2 rounded-md">
+        </div>
+        
+    </div>
+</form>
 {% endblock %}

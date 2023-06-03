@@ -4,9 +4,9 @@
 
 <head>
 
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Blog Django v1</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" class=''>
     
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,29 +18,34 @@
 
 </head>
 
-<body>
+<body class="bg-slate-600">
+
+    <div class="m-4 p-4 bg-slate-50 rounded-xl space-y-4 text-center  ">
+        
     <header>
-        <h1><a href="{% url 'home' %}"> Django Tiburon 1</a></h1>
+        <h1><a href="{% url 'home' %}" class=" text-2xl mb-5 "> Django Tiburon 1</a></h1>
         <a href="{% url 'create_post' %}">
-            <h2>Nuevo Post</h2>
+            <h2 class="m-4 bg-blue-500 rounded-xl text-white px-2 pt-1">Nuevo Post</h2>
         </a>
 
     </header>
 
     {% if user.is_authenticated %}
 
-    <p>Epale {{ user.username }}</p>
-    <a href="{% url 'logout' %}">Logout</a>
+    <p class="">Epale {{ user.username }}</p>
+    <a class="bg-red-400 rounded-xl text-white px-2 pt-1" href="{% url 'logout' %}">Logout</a>
 
     {% else %}
-
-    <p>Epale no estas registrado</p>
-    <a href="{% url 'login' %}">Sign in</a>
-    <a href="{% url 'signup' %}">Sign up</a>
+    <div class="bg-slate-50 shadow-xl border-black max-w-sm mx-auto p-2 rounded-xl">
+        
+    <p class="m-2 ">Epale no estas registrado</p>
+    <a href="{% url 'login' %}" class="bg-green-500 rounded-xl text-white px-2 pt-1">Sign in</a>
+    <a href="{% url 'signup' %}" class="bg-green-500 rounded-xl text-white px-2 pt-1">Sign up</a>
+    </div>
     {% endif %}
     
 
-    <div>
+    <div class="m-4 p-4 bg-slate-50 rounded-xl space-y-4 text-center shadow-xl max-w-md mx-auto">
         {% block content %}
 
         {% endblock content %}
@@ -48,6 +53,7 @@
 
     <div>
 
+    </div>
     </div>
 </body>
 

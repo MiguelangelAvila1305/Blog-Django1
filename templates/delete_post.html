@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Borrar Post</h1>
+<h1 class="text-xl font-medium">Borrar Post</h1>
 
 <form action="" method="POST">
     {% csrf_token %}
     {{form.as_p}}
-    <p>Estas seguro de que quieres eliminar este post?</p>
-    <input type="submit" value="delete">
+    <p class="m-4">Estas seguro de que quieres eliminar este post?</p>
+    <input type="submit" value="delete" class="bg-red-500 text-white px-4 py-1 rounded-xl">
 </form>
 {% endblock %}

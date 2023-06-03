@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Editar post</h1>
+    <h1 class="text-xl font-medium">Editar post</h1>
         <form action="" method="POST">
             {% csrf_token %}
             {{form.as_p}}
-            <input type="submit" value="update">
+            <input type="submit" value="update" class="bg-blue-500 text-white px-4 py-2 rounded-md">
         </form>
 {% endblock %}

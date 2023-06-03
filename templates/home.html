@@ -3,7 +3,7 @@
 {% block content %}
     {% for post in post_list %}
     
-        <h2><a href="{% url 'post_detail' post.pk %}"> {{ post.title }}</a></h2>
+        <h2 class="bg-slate-700 rounded-xl text-white m-auto max-w-sm px-2 pt-1"><a href="{% url 'post_detail' post.pk %}"> {{ post.title }}</a></h2>
         <p>{{ post.body }}</p>
         <p><b>Autor:{{ post.author }}</b></p>
     {% endfor %}
