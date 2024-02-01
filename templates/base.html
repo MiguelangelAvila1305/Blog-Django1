@@ -24,9 +24,12 @@
         
     <header>
         <h1><a href="{% url 'home' %}" class=" text-2xl mb-5 "> Django Tiburon 1</a></h1>
-        <a href="{% url 'create_post' %}">
-            <h2 class="m-4 bg-blue-500 rounded-xl text-white px-2 pt-1">Nuevo Post</h2>
-        </a>
+        
+        <div>
+            <a href="{% url 'create_post' %}">
+                <h2 class="m-4 bg-blue-500 rounded-xl text-white px-2 pt-1 max-w-sm mx-auto  ">Nuevo Post</h2>
+            </a>
+        </div>
 
     </header>
 
